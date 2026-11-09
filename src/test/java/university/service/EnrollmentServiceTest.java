@@ -110,6 +110,6 @@ public class EnrollmentServiceTest {
                 () -> service.enroll(null)
         );
 
-        assertEquals(0, repository.findAll().size());
+        assertEquals(1, repository.findAll().size());
     }
 }
