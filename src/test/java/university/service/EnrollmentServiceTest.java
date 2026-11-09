@@ -95,4 +95,21 @@ public class EnrollmentServiceTest {
                 )
         );
     }
+
+    @Test
+    void studentCannotEnrollWithNullEnrollment() {
+
+        Repository repository =
+                new InMemoryCourseRepository();
+
+        EnrollmentService service =
+                new EnrollmentService(repository);
+
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> service.enroll(null)
+        );
+
+        assertEquals(0, repository.findAll().size());
+    }
 }

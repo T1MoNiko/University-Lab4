@@ -12,6 +12,11 @@ public class EnrollmentService {
     }
 
     public void enroll(Enrollment enrollment) {
+        if (enrollment == null) {
+            throw new IllegalArgumentException(
+                    "Enrollment must not be null"
+            );
+        }
 
         for (Enrollment existingEnrollment : repository.findAll()) {
 
