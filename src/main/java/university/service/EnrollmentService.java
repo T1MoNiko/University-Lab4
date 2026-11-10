@@ -11,6 +11,8 @@ public class EnrollmentService {
     private static final Logger logger =
             LoggerFactory.getLogger(EnrollmentService.class);
 
+    private int BAD_variable_name = 10;
+
     private final Repository repository;
 
     public EnrollmentService(Repository repository) {

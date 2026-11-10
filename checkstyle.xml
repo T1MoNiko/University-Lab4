@@ -10,6 +10,7 @@
     </module>
 
     <module name="FileTabCharacter"/>
+    <module name="MemberName"/>
 
     <module name="TreeWalker">
         <module name="TypeName"/>
