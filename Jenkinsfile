@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
 
@@ -6,6 +5,12 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'mvn compile'
+            }
+        }
+
+        stage('Static Analysis') {
+            steps {
+                bat 'mvn checkstyle:check'
             }
         }
 
